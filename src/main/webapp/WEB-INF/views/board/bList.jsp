@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +22,7 @@
 			<c:forEach var="boardDto" items="${boardList }">
 			<tr>
 				<td>${boardDto.num} </td>
-				<td><a href="boardInfo?num=${boardDto.num }">${boardDto.subject }</a></td>
+				<td><a href="${contextPath}/board/boardInfo?num=${boardDto.num }">${boardDto.subject }</a></td>
 				<td>${boardDto.writer }</td>
 				<td><fmt:formatDate value="${boardDto.regDate }" pattern="yyyy-MM-dd"/> </td>
 				<td>${boardDto.readCount }</td>
@@ -29,7 +30,7 @@
 			</c:forEach>
 			<tr>
 				<td colspan="5" align="right">
-					<input type="button" onclick="location.href='boardWrite'" value="글쓰기">
+					<input type="button" onclick="location.href='${contextPath}/board/boardWrite'" value="글쓰기">
 				</td>
 			</tr>
 		</table>

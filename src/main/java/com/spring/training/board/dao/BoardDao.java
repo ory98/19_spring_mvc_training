@@ -10,5 +10,6 @@ public interface BoardDao {
 	public List<BoardDto> selectListBoard();	// 앞에 반환 타입 작성 
 	public BoardDto selectOneBoard(int num);
 	public void updateReadCount(int num);		// 괄호 안에는 받는 타입 작성 
-	
+	public BoardDto validateUserCheck(BoardDto boardDto);
+	public void updateBoard(BoardDto boardDto);
 }

@@ -3,9 +3,12 @@
 
 <configuration>
 
-	<!-- Camel Case, Snake Case로 설계된 경우 Mybatis Mapper에서 resultMap을 사용하지 않아도 자바변수와 컬럼명을 매치해준다. -->
 	<settings>
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
-
+	
+	<typeAliases>
+		<typeAlias type="com.spring.training.board.dto.BoardDto" alias="BoardDto"/>
+	</typeAliases>
+	
 </configuration>

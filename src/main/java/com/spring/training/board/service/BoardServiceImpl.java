@@ -25,10 +25,24 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public BoardDto boardInfo(int num) {
-		boardDao.updateReadCount(num);
-		return boardDao.selectOneBoard(num);
+	public BoardDto boardInfo(int num) { // 하나의 게시글을 열람할 때
+		boardDao.updateReadCount(num); // 하나의 게시글의 조회수를 오름 
+		return boardDao.selectOneBoard(num); 
 	}
+
+	@Override
+	public boolean modifyBoard(BoardDto boardDto) {
+		boolean isUpdate = false;
+		
+		if (boardDao.validateUserCheck(boardDto) != null) {
+			boardDao.updateBoard(boardDto);
+			isUpdate = true;
+		}
+		
+		return isUpdate;
+	}
+
+	
 	
 	
 
