@@ -50,7 +50,7 @@
 				NUM = #{num}
 	</update>
 	
-	<select id="validateUserCheck" parameterType="BaordDto" resultType="BoardDto">
+	<select id="validateUserCheck" parameterType="BoardDto" resultType="BoardDto">
 		SELECT
 				*
 		FROM
@@ -59,7 +59,7 @@
 				NUM = #{num} AND PASSWORD = #{password}
 	</select>
 	
-	<update id="updateBoard" parameterType="BaordDto">
+	<update id="updateBoard" parameterType="BoardDto">
 		UPDATE
 				T_SPRING_BOARD
 		SET
@@ -69,4 +69,11 @@
 				NUM = #{num}
 				
 	</update>
+	
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM 
+				T_SPRING_BOARD
+		WHERE
+				NUM = #{num}
+	</delete>
 </mapper>

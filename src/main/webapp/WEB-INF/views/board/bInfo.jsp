@@ -49,9 +49,9 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="button" value="수정하기" onclick="location.herf='${contextPath}/board/boardUpdate?num=${boardDto.num}'">
-					<input type="button" value="삭제하기" onclick="location.herf='${contextPath}/board/boardDelete?num=${boardDto.num}'">
-					<input type="button" value="목록보기" onclick="${contextPath}/board/boardList">
+					<input type="button" value="수정하기" onclick="location.href='${contextPath}/board/boardUpdate?num=${boardDto.num}'">
+					<input type="button" value="삭제하기" onclick="location.href='${contextPath}/board/boardDelete?num=${boardDto.num}'">
+					<input type="button" value="목록보기" onclick="location.href='${contextPath}/board/boardList'">
 				</td>
 			</tr>
 		</table>

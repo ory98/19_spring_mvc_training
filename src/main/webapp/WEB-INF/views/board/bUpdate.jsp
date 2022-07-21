@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div align="center" style="padding-top: 100px">
-		<form action="${contextPath }/board/boardUpate" method="post" >
+		<form action="${contextPath }/board/boardUpdate" method="post" >
 			<div align="center">
 				<h1>게시글 수정</h1>
 				<br>
