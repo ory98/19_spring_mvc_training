@@ -16,8 +16,8 @@
 		- 4가지의 특정 유틸리티가 소스에 반영되어 있습니다.
 		- 모르는 부분은 구글링 하여 이해 및 해결하여 새로운 문법을 익히는 힘과 노하우를 기릅니다.
 		
-		1) ckeditor				 : join.jsp , webapp/resources/ckeditor
- 		2) daumpostofficecode	 : join.jsp , myPage.jsp
+		1) ckeditor				 : register.jsp , webapp/resources/ckeditor
+ 		2) daumpostofficecode	 : register.jsp , myPage.jsp
 		3) excel export          : pom.xml , memberList.jsp MemberController.java
 		4) BCryptPasswordEncoder : pom.xml , root-context.xml , MemberServiceImpl.java
 	
